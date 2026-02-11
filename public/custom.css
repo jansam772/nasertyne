@@ -1,19 +1,55 @@
 /* Custom Overrides for Naše Rtyně */
 
-
-/* Logo Sizing Override */
-#mainNav .navbar-brand img {
-    height: 3rem;
-    /* Mobile */
+:root {
+    --brand-blue: hsl(223, 88%, 30%);
+    --brand-blue-alt: #0d48e2;
+    --brand-yellow: #fedf00;
 }
 
-/* Navbar Padding Override */
-.navbar-brand {
+/* --- NAVBAR OVERRIDES --- */
+/* Switch to White background for Logo Contrast */
+#mainNav {
     padding-top: 0;
     padding-bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Links become Blue */
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: var(--brand-blue);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(0, 0, 0);
+    /* Darker blue for interaction */
+}
+
+#mainNav .navbar-toggler {
+    background-color: var(--brand-blue);
+    color: #fff;
+    padding: 0.75rem;
+}
+
+/* Desktop resizing logic */
 @media (min-width: 992px) {
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #fff;
+        /* Keep white even when top */
+    }
+
+    #mainNav.navbar-shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #fff;
+    }
+
+    /* Logo Sizing */
     #mainNav .navbar-brand img {
         height: 4rem;
         /* Desktop default */
@@ -23,4 +59,79 @@
         height: 3.5rem;
         /* Desktop scrolled */
     }
+}
+
+/* Mobile Logo Sizing */
+@media (max-width: 991px) {
+    #mainNav .navbar-brand img {
+        height: 3rem;
+    }
+}
+
+
+
+/* --- COLOR THEME APPLICATION --- */
+
+/* Primary Buttons (Yellow bg, Blue text) */
+.btn-primary {
+    background-color: var(--brand-yellow);
+    border-color: var(--brand-yellow);
+    color: var(--brand-blue);
+    font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #e5c800 !important;
+    /* Slightly darker yellow */
+    border-color: #e5c800 !important;
+    color: var(--brand-blue) !important;
+}
+
+/* Section Icons (Blue for visibility on white) */
+.text-primary {
+    color: var(--brand-blue) !important;
+}
+
+/* Timeline Circles (Alternating colors) */
+.timeline>li .timeline-image {
+    background-color: var(--brand-blue);
+    border: 7px solid #f1f1f1;
+}
+
+.timeline>li.timeline-inverted>.timeline-image {
+    background-color: var(--brand-yellow);
+}
+
+/* Fix text contrast inside Yellow circles */
+.timeline>li.timeline-inverted>.timeline-image h4 {
+    color: var(--brand-blue);
+    font-weight: 800;
+}
+
+/* Contact Section (Blue Background) */
+section#contact {
+    background-color: var(--brand-blue);
+    background-image: none;
+    /* Optional: remove map image for cleaner look */
+}
+
+section#contact .section-heading {
+    color: #fff;
+}
+
+section#contact ::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Footer Social Icons */
+.btn-social {
+    background-color: var(--brand-blue);
+    color: #fff;
+}
+
+.btn-social:hover {
+    background-color: var(--brand-blue-alt);
+    /* color: var(--brand-blue); */
 }
