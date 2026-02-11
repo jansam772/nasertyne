@@ -1,0 +1,37 @@
+/* Custom Overrides for Naše Rtyně */
+
+/* Navbar Padding Override */
+#mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #mainNav.navbar-shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+/* Logo Sizing Override */
+#mainNav .navbar-brand img {
+    height: 3rem;
+    /* Mobile */
+}
+
+@media (min-width: 992px) {
+    #mainNav .navbar-brand img {
+        height: 5rem;
+        /* Desktop default */
+    }
+
+    #mainNav.navbar-shrink .navbar-brand img {
+        height: 3.5rem;
+        /* Desktop scrolled */
+    }
+}
