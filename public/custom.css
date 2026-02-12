@@ -122,7 +122,12 @@ section#contact .section-heading {
 }
 
 section#contact ::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: hsl(210, 14%, 60%) !important;
+}
+
+section#contact form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+  font-weight: 700 !important;
 }
 
 /* Footer Social Icons */
