@@ -206,15 +206,23 @@ section#contact form#contactForm .form-group textarea {
 /* --- FORM VALIDATION STABILITY --- */
 /* Ensure invalid-feedback takes up space even when hidden to prevent layout jumps */
 .invalid-feedback {
-    display: block !important; /* Force block display to reserve space */
-    visibility: hidden;       /* Hide content visually */
-    min-height: 1.25em;       /* Height of one line of text approx */
+    display: block !important;
+    /* Force block display to reserve space */
+    visibility: hidden;
+    /* Hide content visually */
+    min-height: 1.25em;
+    /* Height of one line of text approx */
     margin-top: 0.25rem;
 }
 
 /* Show feedback when the form is validated and input is invalid */
-.was-validated .form-control:invalid ~ .invalid-feedback,
-.was-validated .form-select:invalid ~ .invalid-feedback,
-.form-control.is-invalid ~ .invalid-feedback {
+.was-validated .form-control:invalid~.invalid-feedback,
+.was-validated .form-select:invalid~.invalid-feedback,
+.form-control.is-invalid~.invalid-feedback {
     visibility: visible;
+}
+
+/* --- HEADER BACKGROUND FILTER --- */
+header.masthead {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/img/header-bg.png");
 }
