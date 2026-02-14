@@ -227,3 +227,9 @@ section#contact form#contactForm .form-group textarea {
 header.masthead {
     background-image: linear-gradient(var(--header-bg), var(--header-bg)), url("./assets/img/header-bg.png") !important;
 }
+
+/* --- PRIORITY SECTION TWEAKS --- */
+#priority .fa-stack {
+    margin-top: 1rem; /* Increase spacing above icons */
+    margin-bottom: 1rem;
+}
