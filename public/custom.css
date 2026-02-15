@@ -230,11 +230,20 @@ header.masthead {
 
 /* --- PRIORITY SECTION TWEAKS --- */
 #priority .fa-stack {
-    margin-top: 1rem; /* Increase spacing above icons */
+    margin-top: 1rem;
+    /* Increase spacing above icons */
     margin-bottom: 1rem;
 }
 
 /* --- VIZE ALIGN --- */
 #vize p {
     text-align: justify;
+}
+
+#vize ul li {
+    text-align: justify;
+}
+
+#vize ul li strong {
+    display: inline-block;
 }
