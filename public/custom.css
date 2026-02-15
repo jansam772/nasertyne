@@ -233,3 +233,8 @@ header.masthead {
     margin-top: 1rem; /* Increase spacing above icons */
     margin-bottom: 1rem;
 }
+
+/* --- VIZE ALIGN --- */
+#vize p {
+    text-align: justify;
+}
